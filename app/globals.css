@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAFAF8;
+  --foreground: #1A1A1A;
+  --accent: #8C6D46;
+  --accent-light: #C8A96E;
+  --muted: #6B7280;
+  --border: #E5E2DC;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-noto-sans-jp), "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Meiryo", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Japanese text optimization */
+p, li, span {
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
 }
