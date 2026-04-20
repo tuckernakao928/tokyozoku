@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="ja" className={`${notoSansJP.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[#FAFAF8] text-[#1A1A1A]">
         {children}
+        <GoogleAnalytics gaId="G-SFLFOGKZFN" />
       </body>
     </html>
   );
