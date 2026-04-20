@@ -89,7 +89,7 @@ export default function Home() {
           {/* ロゴヘッダー */}
           <div className="flex items-center gap-8 mb-14">
             <Image
-              src="/tokyozoku-logo.png.jpg"
+              src="/tokyozoku-logo.jpg"
               alt="週末東京族ロゴ"
               width={160}
               height={160}
