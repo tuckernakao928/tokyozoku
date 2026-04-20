@@ -669,7 +669,7 @@ export default function SimulatorClient() {
 
               {/* ⑦ LINE登録ボタン */}
               <a
-                href="https://lin.ee/XXXXXXXX"
+                href="https://lin.ee/qAl3U8b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-4 bg-[#06C755] text-white text-sm font-bold rounded-xl hover:bg-[#05a847] transition-colors"
