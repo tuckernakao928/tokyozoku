@@ -192,7 +192,7 @@ export default function SimulatorClient() {
     setStep(3);
   };
 
-  const shareText = `【週末東京族シミュレーター】\n移住先：${city.name}\n月${frequency}回東京に戻る想定\n移住で生まれる東京のお小遣い：年間${fmt(result.netAnnual)}\n月換算：${fmt(result.netMonthly)}\n\nあなたも試してみる → https://tokyozoku.com/simulator`;
+  const shareText = `【夢の二拠点生活！コストシミュレーター】\n東京から拠点を「${city.name}」へ移し、月${frequency}回${nights > 0 ? nights + '泊' : '日帰り'}で東京に戻る想定！\n移住で生まれるあなたの余裕は…\n\n「年間¥${result.netAnnual.toLocaleString()}（月¥${Math.abs(result.netMonthly).toLocaleString()}）」\n\nあなたも試してみる → https://tokyozoku.com/simulator`;
   const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
 
   const CityRow = ({ c, rank }: { c: City; rank?: number }) => {
