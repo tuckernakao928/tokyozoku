@@ -39,6 +39,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} h-full antialiased`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3471434470251085"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#FAFAF8] text-[#1A1A1A]">
         {children}
         <GoogleAnalytics gaId="G-SFLFOGKZFN" />
