@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const featuredContents = [
   {
@@ -85,21 +86,43 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
-          <p className="text-xs font-medium tracking-[0.2em] text-[#8C6D46] uppercase mb-6">
-            逆参勤交代という生き方
-          </p>
-          <h1 className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight mb-8">
-            地方に住む。
-            <br />
-            東京を使う。
-          </h1>
-          <p className="text-lg sm:text-xl text-[#6B7280] leading-relaxed max-w-xl mb-10">
-            「完全移住」でも「東京在住」でもない。
-            <br className="hidden sm:block" />
-            平日は地方で暮らし、週末だけ東京へ通う。
-            <br className="hidden sm:block" />
-            それが、週末東京族のライフスタイルです。
-          </p>
+          {/* ロゴヘッダー */}
+          <div className="flex items-center gap-8 mb-14">
+            <Image
+              src="/tokyozoku-logo.png"
+              alt="週末東京族ロゴ"
+              width={160}
+              height={160}
+              priority
+            />
+            <div
+              className="self-stretch w-px"
+              style={{ backgroundColor: "#E5E2DC" }}
+            />
+            <div className="flex flex-col gap-2">
+              <h1
+                style={{
+                  color: "#1B3A6B",
+                  fontWeight: 900,
+                  fontSize: "36px",
+                  lineHeight: 1.1,
+                }}
+              >
+                週末東京族
+              </h1>
+              <p style={{ color: "#8B7535", fontSize: "16px" }}>
+                地方に住む。東京を使う。
+              </p>
+              <hr style={{ borderColor: "#E5E2DC", margin: "4px 0" }} />
+              <p style={{ color: "#6B7280", fontSize: "13px" }}>
+                東京から2時間圏内の移住先を、コストで比較するメディア。
+              </p>
+              <p style={{ color: "#6B7280", fontSize: "13px" }}>
+                46都市のデータをもとに、あなたの2拠点生活をシミュレーション。
+              </p>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/simulator"
