@@ -648,7 +648,13 @@ export default function SimulatorClient() {
                   📊 {city.name}のその他データ
                 </p>
                 <p className="text-sm text-[#6B7280]">
-                  ・物価：東京より約{(100 - city.priceIndex).toFixed(1)}%安い
+                  ・物価：{
+                    city.priceIndex < 99
+                      ? `東京より約${(100 - city.priceIndex).toFixed(1)}%安い`
+                      : city.priceIndex > 101
+                      ? `東京より約${(city.priceIndex - 100).toFixed(1)}%高い`
+                      : `東京とほぼ同じ`
+                  }
                 </p>
                 <p className="text-sm text-[#6B7280]">
                   ・レジャー充実度：{city.leisureText}
