@@ -87,19 +87,20 @@ export default function Home() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
           {/* ロゴヘッダー */}
-          <div className="flex items-center gap-8 mb-14">
+          <div className="flex flex-col items-center gap-6 mb-14 md:flex-row md:items-center md:gap-8">
             <Image
               src="/tokyozoku-logo.jpg"
               alt="週末東京族ロゴ"
               width={160}
               height={160}
+              className="w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
               priority
             />
             <div
-              className="self-stretch w-px"
+              className="hidden md:block self-stretch w-px"
               style={{ backgroundColor: "#E5E2DC" }}
             />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 items-center text-center md:items-start md:text-left">
               <h1
                 style={{
                   color: "#1B3A6B",
